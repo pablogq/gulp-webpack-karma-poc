@@ -14,8 +14,14 @@ exports.config = {
     'browserName': 'chrome'
   },
 
+  framework: 'mocha',
+
   onPrepare: function() {
      global.dvr = browser.driver;
+
+
+
+
   }
 
 
