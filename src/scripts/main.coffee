@@ -17,6 +17,7 @@ input.id = 'myinput'
 document.body.appendChild  input
 
 button = document.createElement 'button'
+button.id = 'mybutton'
 button.innerText = 'press me'
 
 
