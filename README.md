@@ -40,6 +40,8 @@ This is the list of available tasks:
 
 You can execute any task like this:
 
+
+
 ```
 $ gulp [task-name]
 ```
@@ -50,6 +52,38 @@ So to run the application in the dev server you can execute:
 
 ```
 $ gulp dev
+```
+
+## e2e Testing
+Uses *Protractor* for e2e tests. Specs are found in spec-e2e/**/*/js. Specs can be written in coffeescript and can be found in spec-e2e/coffee.
+
+### Gulp Tasks for e2e
+
+**Gulp protractor e2e testing tasks: ** ./gulp/tasks/protractor.coffeee
+
+**protractor-install**
+  > installs/updates webdriver
+
+**protractor-run**
+  > run the tests specified in the config file '_protractor.conf.js_'
+
+**coffee**
+  > compile coffeescript in spec-e2e/coffee/ and puts the compiled javascript in spec-e2e/
+
+**e2e**
+  > runs coffee followed by protractor run
+
+**e2e-watch**
+  > runs e2e task when files in spec-e2e/ are changed
+
+run test suite listed in protractor.conf.js once:
+```
+$ gulp e2e
+```
+
+watch for any changes changes to the spec files.
+```
+$ gulp e2e-watch
 ```
 
 ## Configuration
